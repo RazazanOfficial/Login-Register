@@ -1,0 +1,329 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(230deg, rgba(45, 149, 190, 0.9) 0%, rgba(56, 129, 205, 0.95) 50%, rgba(9, 65, 125, .9) 100%), url(../img/Vector.svg);
+    background-size: cover;
+}
+
+.register-card-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.register-card {
+    width: 450px;
+    background: #191d23;
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 5px 3px #06051496;
+}
+
+.register-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 29, 35, .5);
+    transform: rotate(-10deg);
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0px 0px 8px 4px #060514d4;
+}
+
+.register-card-header,
+.register-card-footer {
+    text-align: center;
+}
+
+.register-card a {
+    text-decoration: none;
+    color: #d33f46;
+    transition: .1s;
+}
+
+.register-card a:hover {
+    color: #f5101c;
+    scale: 1.01;
+}
+
+.register-card a:hover {
+    text-decoration: underline;
+}
+
+.register-card-header {
+    margin-bottom: 2rem;
+    color: #ffe6e6;
+}
+
+.register-card-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.register-card-header h1+div {
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+.register-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.register-card-form .form-item {
+    position: relative;
+}
+
+.register-card-form .form-item .form-item-icon {
+    position: absolute;
+    top: 50%;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.register-card-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-bottom: 10px;
+}
+
+.register-card-form .form-item-other {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: .5rem;
+    font-size: 13px;
+    color: #ffe6e6;
+}
+
+.register-card-footer {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: #ffe6e6;
+}
+
+/* register Card Form Elements */
+.register-card input[type="text"],
+.register-card input[type="password"],
+.register-card input[type="email"] {
+    border: none;
+    outline: none;
+    color: #ffe6e6;
+    background: #232931;
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+}
+
+.register-card input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #232931;
+}
+
+.custom-btn {
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-12 {
+    color: #0bf4f3;
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+.btn-12 span {
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    border: 1px solid #0bf4f3;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(1) {
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    border-radius: 5px;
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12:hover span:nth-child(1) {
+    border-radius: 5px;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+    background: #191d23;
+    color: #191d23;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.register-card-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.register-card-social>div {
+    opacity: .8;
+    color: #ffe6e6;
+}
+
+.register-card-social-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.register-card-social-btns a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-color: #191d23;
+    border-radius: 100px;
+    transition: all .3s;
+}
+
+.register-card-social.btns path {
+    color: #0bf4f3;
+}
+
+.register-card-social-btns a:hover {
+    background-color: #ffe6e6;
+}
+
+.wrapper {
+    padding: 10px;
+    border: 2px solid #7071727a;
+    width: 100%;
+    border-radius: 7px;
+    background-color: #191d23;
+}
+
+.content {
+    margin: 20px 0 10px;
+}
+
+.content p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.requirement-list {
+    margin-top: 20px;
+}
+
+.requirement-list li {
+    margin-bottom: 10px;
+    list-style: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.requirement-list li i {
+    width: 20px;
+    font-size: 8px;
+    color: #ccc;
+}
+
+.requirement-list li.valid i {
+    font-size: 14px;
+    color: #4285f4;
+}
+
+.requirement-list li span {
+    margin-right: 5px;
+    color: #fff;
+}
+
+.requirement-list li.valid span {
+    color: #999;
+}
+
+.error-message {
+    font-size: 0.8rem;
+    font-weight: 500;
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 2rem 0;
+    }
+
+    .register-card {
+        width: 370px;
+        padding: 2rem;
+    }
+
+}
